@@ -141,13 +141,13 @@ const ListPage = () => {
         {selectedBook ? (
           <div>
             <img
-              src={getThumbnailUrl(selectedBook.register_code)}
+              src={getThumbnailUrl(selectedBook.controlNo)}
               alt="책 썸네일"
               className="img-thumbnail mb-3"
               style={{ width: "150px", height: "auto" }}
               onError={(e) => {
-                if (e.target.src === getThumbnailUrl(selectedBook.register_code)) {
-                  e.target.src = getThumbnailUrl2(selectedBook.register_code);
+                if (e.target.src === getThumbnailUrl(selectedBook.controlNo)) {
+                  e.target.src = getThumbnailUrl2(selectedBook.controlNo);
                 } else {
                   e.target.src = "https://library.handong.edu/image/ko/solution/local/noCoverImg.jpg";
                 }
