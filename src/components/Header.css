@@ -12,7 +12,7 @@ header {
   
   /* 로고 스타일 */
   header img {
-    max-height: 50px; /* 로고 크기 제한 */
+    max-height: 100px; /* 로고 크기 제한 */
     margin-right: 15px; /* 로고와 텍스트 사이 간격 */
   }
   

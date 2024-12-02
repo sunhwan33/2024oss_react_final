@@ -9,13 +9,13 @@ const Header = () => {
         {/* 왼쪽 로고 및 텍스트 */}
         <div className="d-flex align-items-center">
           <img
-            src="/handong.png"
+            src="/logo.png"
             alt="한동대학교 도서관 로고"
-            style={{ width: "60px", marginRight: "15px" }} // 로고와 텍스트 간 간격
+            style={{ width: "120px", marginRight: "15px" }} // 로고와 텍스트 간 간격
           />
-          <h1 className="mb-0" style={{ fontSize: "1.5rem" }}>
+          {/* <h1 className="mb-0" style={{ fontSize: "1.5rem" }}>
             한동대학교 도서관
-          </h1>
+          </h1> */}
         </div>
 
         {/* 오른쪽 버튼 */}
