@@ -1,0 +1,55 @@
+/* Header 기본 스타일 */
+header {
+    background-color: #f8f9fa; /* 밝은 배경색 */
+    border-bottom: 2px solid #007bff; /* 하단 경계선 */
+    padding: 15px 20px; /* 여백 추가 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "맑은 고딕", "Nanum Gothic", sans-serif; /* 글꼴 지정 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 살짝의 그림자 */
+  }
+  
+  /* 로고 스타일 */
+  header img {
+    max-height: 50px; /* 로고 크기 제한 */
+    margin-right: 15px; /* 로고와 텍스트 사이 간격 */
+  }
+  
+  /* 제목 스타일 */
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* 다크 텍스트 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+  }
+  
+/* Right Section: Logo */
+.header-right {
+    flex: 0 0 auto;
+  }
+  
+  .national-library-logo {
+    height: 30px; /* Adjust size of the logo */
+    width: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out; /* Add hover effect */
+  }
+  
+  .national-library-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  /* 반응형 스타일 */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start; /* 요소들이 왼쪽 정렬 */
+    }
+  
+    header a.btn {
+      margin-top: 10px; /* 버튼과 위 요소 간 간격 */
+    }
+  }
+  

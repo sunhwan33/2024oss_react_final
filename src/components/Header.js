@@ -1,30 +1,39 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <Navbar bg="light" expand="lg" className="mb-4">
-      <Navbar.Brand as={Link} to="/">
-        {/* Replace with your logo if available */}
-        <img
-          src="/logo192.png"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-          alt="Site Logo"
-        />{' '}
-        도서관 관리 시스템
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto">
-          <Nav.Link as={Link} to="/list">대출현황·갱신</Nav.Link>
-          {/* <Nav.Link as={Link} to="/myreserve/list">예약현황</Nav.Link> */}
-          {/* Add more navigation links as needed */}
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <header className="bg-light py-3">
+      <div className="container d-flex justify-content-between align-items-center">
+        {/* 왼쪽 로고 및 텍스트 */}
+        <div className="d-flex align-items-center">
+          <img
+            src="/handong.png"
+            alt="한동대학교 도서관 로고"
+            style={{ width: "60px", marginRight: "15px" }} // 로고와 텍스트 간 간격
+          />
+          <h1 className="mb-0" style={{ fontSize: "1.5rem" }}>
+            한동대학교 도서관
+          </h1>
+        </div>
+
+        {/* 오른쪽 버튼 */}
+        <div className="header-right">
+        <a
+          href="https://www.nl.go.kr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/nl.svg"
+            alt="국립중앙도서관 로고"
+            className="national-library-logo"
+          />
+        </a>
+      </div>
+      </div>
+    </header>
   );
 };
 
