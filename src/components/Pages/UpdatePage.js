@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Header from "../Header";
 const UpdatePage = () => {
   const { id } = useParams(); // Get the ID from the route
   const navigate = useNavigate();
@@ -65,7 +65,10 @@ const UpdatePage = () => {
   };
 
   return (
+    <div>
+      <Header />
     <div className="container my-5">
+      
       <h1 className="mb-4 text-center">도서 정보 수정</h1>
       <form onSubmit={handleSubmit}>
         <div className="row g-3">
@@ -208,6 +211,7 @@ const UpdatePage = () => {
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 };
