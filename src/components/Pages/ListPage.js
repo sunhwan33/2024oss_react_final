@@ -241,15 +241,13 @@ const [selectedBook, setSelectedBook] = useState(null);
               <th>Actions</th>
               <th>No.</th>
               <th>도서명</th>
-              <th>도서
-                별칭</th>
+              <th>도서<br />별칭</th>
               <th>저자명</th>
               <th>등록번호</th>
               <th>청구기호</th>
               <th>출판사명</th>
               {/* <th>ISBN</th> */}
-              <th>출판
-                연도</th>
+              <th>출판<br />연도</th>
               <th>대출일</th>
               <th>반납일</th>
             </tr>
