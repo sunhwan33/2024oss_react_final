@@ -23,6 +23,15 @@
   text-decoration: none;
 }
 
+.table-dark th, .table-dark td {
+  vertical-align: middle; /* 세로 가운데 정렬 */
+  text-align: center;     /* 가로 가운데 정렬 (옵션) */
+}
+
+.img-thumbnail_list {
+  max-width: 125px;
+  height: auto;
+}
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .filter-container {

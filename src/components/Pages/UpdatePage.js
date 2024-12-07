@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../Styles/UpdatePage.css"
 import Header from "../Header";
+import { getThumbnailUrl, getThumbnailUrl2 } from "../utils";
 const UpdatePage = () => {
   const { id } = useParams(); // Get the ID from the route
   const navigate = useNavigate();
@@ -16,7 +18,8 @@ const UpdatePage = () => {
     published_year: "",
     call_num: "",
     nickname: "",
-    comment: ""
+    comment: "",
+    controlNo:""
   });
 
   // Fetch current data for the item
@@ -67,26 +70,27 @@ const UpdatePage = () => {
   return (
     <div>
       <Header />
+      
     <div className="container my-5">
       
       <h1 className="mb-4 text-center">도서 정보 수정</h1>
+      <div className="center-container"><img
+                src={getThumbnailUrl(formData.controlNo)}
+                alt="책 썸네일"
+                className="img-thumbnail me-3 "
+                
+                onError={(e) => {
+                  if(e.target.src === getThumbnailUrl(formData.controlNo)) {
+                    e.target.src = getThumbnailUrl2(formData.controlNo);
+                }else{
+                  e.target.src = "https://library.handong.edu/image/ko/solution/local/noCoverImg.jpg";
+                }
+              }}
+              />
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="row g-3">
-          <div className="col-md-6">
-            <label htmlFor="register_code" className="form-label">
-              등록번호
-            </label>
-            <input
-              type="text"
-              id="register_code"
-              name="register_code"
-              value={formData.register_code}
-              onChange={handleChange}
-              className="form-control"
-              required
-            />
-          </div>
-          <div className="col-md-6">
+        <div className="col-md-6">
             <label htmlFor="book_name" className="form-label">
               도서명
             </label>
@@ -129,20 +133,6 @@ const UpdatePage = () => {
             />
           </div>
           <div className="col-md-6">
-            <label htmlFor="ISBN" className="form-label">
-              ISBN
-            </label>
-            <input
-              type="text"
-              id="ISBN"
-              name="ISBN"
-              value={formData.ISBN}
-              onChange={handleChange}
-              className="form-control"
-              required
-            />
-          </div>
-          <div className="col-md-6">
             <label htmlFor="published_year" className="form-label">
               출판연도
             </label>
@@ -156,20 +146,39 @@ const UpdatePage = () => {
               required
             />
           </div>
-          
           <div className="col-md-6">
-            <label htmlFor="comment" className="form-label">
-              코멘트
+            <label htmlFor="register_code" className="form-label">
+              등록번호
             </label>
             <input
               type="text"
-              id="comment"
-              name="comment"
-              value={formData.comment}
+              id="register_code"
+              name="register_code"
+              value={formData.register_code}
               onChange={handleChange}
               className="form-control"
+              required
             />
           </div>
+          
+          
+          <div className="col-md-6">
+            <label htmlFor="ISBN" className="form-label">
+              ISBN
+            </label>
+            <input
+              type="text"
+              id="ISBN"
+              name="ISBN"
+              value={formData.ISBN}
+              onChange={handleChange}
+              className="form-control"
+              required
+            />
+          </div>
+          
+          
+          
           <div className="col-md-6">
             <label htmlFor="call_num" className="form-label">
               청구기호
@@ -197,6 +206,19 @@ const UpdatePage = () => {
               className="form-control"
             />
           </div>
+          <div className="col-md-6">
+            <label htmlFor="comment" className="form-label">
+              나의 한줄후기
+            </label>
+            <input
+              type="text"
+              id="comment"
+              name="comment"
+              value={formData.comment}
+              onChange={handleChange}
+              className="form-control"
+            />
+          </div>
         </div>
         <div className="text-center mt-4">
           <button type="submit" className="btn btn-primary me-2">
@@ -205,7 +227,7 @@ const UpdatePage = () => {
           <button
             type="button"
             className="btn btn-secondary"
-            onClick={() => navigate("/list")}
+            onClick={() => navigate("/myLibrary")}
           >
             취소
           </button>
