@@ -27,14 +27,15 @@ const UpdatePage = () => {
       try {
         const response = await fetch(mockAPI);
         const data = await response.json();
-        setFormData(data);
+        setFormData(data); // 데이터를 설정합니다.
       } catch (error) {
-        console.error("Error fetching data:", error);
-        alert("데이터를 불러오는 중 오류가 발생했습니다.");
+        console.error("Error fetching data:", error); // 콘솔에만 에러를 출력
       }
     };
+  
     fetchData();
   }, [id]);
+  
 
   // Handle form input changes
   const handleChange = (e) => {
@@ -187,7 +188,7 @@ const UpdatePage = () => {
               id="call_num"
               name="call_num"
               value={formData.call_num}
-              onChange={handleChange}
+              readOnly
               className="form-control"
               required
             />
