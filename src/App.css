@@ -1,38 +1,136 @@
-.App {
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-group .form-control {
+  flex: 1;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.input-group .btn {
+  font-size: 16px;
+}
+
+.list-group {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-group-item {
+  display: flex;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item img {
+  flex-shrink: 0;
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 15px;
+  background: #e9ecef;
+}
+
+.list-group-item h5 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.list-group-item p {
+  font-size: 14px;
+  margin: 3px 0;
+  color: #666;
+}
+
+.pagination {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-item .page-link {
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label {
+  font-size: 14px;
+}
+
+h1, h4 {
+  color: #343a40;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .list-group-item {
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .list-group-item img {
+    margin-bottom: 10px;
   }
+}
+
+.custom-pagination {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
