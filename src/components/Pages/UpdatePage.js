@@ -187,7 +187,7 @@ const UpdatePage = () => {
               id="call_num"
               name="call_num"
               value={formData.call_num}
-              readOnly
+              onChange={handleChange}
               className="form-control"
               required
             />
