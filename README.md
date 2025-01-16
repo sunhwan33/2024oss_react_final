@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This service is to rent and return books using the National Museum of Korea api. (Refer to https://www.nl.go.kr/)
 
 ## Available Scripts
 
