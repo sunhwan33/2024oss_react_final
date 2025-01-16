@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This service is to rent and return books using the National Museum of Korea api. (Refer to https://www.nl.go.kr/)
 
+Deployed services are available at https://2024oss-react-final.vercel.app/.
+
 ## Available Scripts
 
 In the project directory, you can run:
